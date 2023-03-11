@@ -1,0 +1,80 @@
+[
+  {
+    "videoId": 1,
+    "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "thumbnailUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg",
+    "title": "Big Buck Bunny",
+    "noOfLikes": 6,
+    "comments": [
+      {
+        "comment": "",
+        "replies": []
+      }
+    ]
+  },
+  {
+    "videoId": 2,
+    "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "thumbnailUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg",
+    "title": "Elephant Dream",
+    "noOfLikes": 6,
+    "comments": [
+      {
+        "comment": "",
+        "replies": []
+      }
+    ]
+  },
+  {
+    "videoId": 3,
+    "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    "thumbnailUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg",
+    "title": "For Bigger Blazes",
+    "noOfLikes": 6,
+    "comments": [
+      {
+        "comment": "",
+        "replies": []
+      }
+    ]
+  },
+  {
+    "videoId": 4,
+    "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    "thumbnailUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerMeltdowns.jpg",
+    "title": "For Bigger Fun",
+    "noOfLikes": 6,
+    "comments": [
+      {
+        "comment": "",
+        "replies": []
+      }
+    ]
+  },
+  {
+    "videoId": 5,
+    "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    "thumbnailUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerJoyrides.jpg",
+    "title": "For Bigger Joyrides",
+    "noOfLikes": 6,
+    "comments": [
+      {
+        "comment": "",
+        "replies": []
+      }
+    ]
+  },
+  {
+    "videoId": 6,
+    "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "thumbnailUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/Sintel.jpg",
+    "title": "Sintel",
+    "noOfLikes": 6,
+    "comments": [
+      {
+        "comment": "",
+        "replies": []
+      }
+    ]
+  }
+]
