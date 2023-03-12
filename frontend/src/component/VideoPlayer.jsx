@@ -24,15 +24,15 @@ const VideoPlayer = () => {
   //   },
   // ];
 
-  useEffect(() => {
-    console.log("index=> ", videoId, idx);
-  });
+  // useEffect(() => {
+  //   console.log("index=> ", videoId, idx);
+  // });
 
   useEffect(() => {
     try {
       const data = localStorage.getItem(videoId);
       const jsonData = JSON.parse(data);
-      console.log(JSON.stringify(jsonData, null, 2));
+      // console.log("item digged out", JSON.stringify(jsonData, null, 2));
       setCommentData(jsonData);
     } catch (e) {
       console.log(e);
@@ -61,35 +61,62 @@ const VideoPlayer = () => {
           }}
           commentData={commentData}
           onSubmitAction={(data) => {
-            console.log("check submit, ", JSON.stringify(data, null, 2));
+            // console.log("check submit ", JSON.stringify(data, null, 2));
+            console.log("it submit");
             let currentData = commentData;
-            const exists = currentData
-              ? currentData.filter((item) => item.comId === data.comId).length
-              : 0;
-            console.log("Hehe");
-            if (!exists) {
-              console.log("Daalna padega");
-              if (currentData) {
-                currentData = [data, ...currentData];
-              } else {
-                currentData = [data];
-              }
+
+            // console.log(" check the current value ==========> ", currentData);
+
+            if (!currentData) {
+              setCommentData([data]);
+              localStorage.setItem(videoId, JSON.stringify([data]));
+
+              // console.log("its an array");
             } else {
-              console.log("Pehle se hai");
-              for (let i = 0; i < currentData.length; i++) {
-                if (currentData[i].comId === data.comId) {
-                  currentData[i] = data;
-                }
-              }
+              // console.log("its not array");
+              currentData = [...currentData, data];
+              setCommentData(currentData);
+              localStorage.setItem(videoId, JSON.stringify(currentData));
             }
-            setCommentData(data);
-            localStorage.setItem(videoId, JSON.stringify(currentData));
+            // const exists = currentData
+            //   ? currentData.filter((item) => item.comId === data.comId).length
+            //   : 0;
+            // console.log("Hehe");
+            // if (!exists) {
+            //   console.log("Daalna padega");
+            //   if (currentData) {
+            //     currentData = [data, ...currentData];
+            //   } else {
+            //     currentData = [data];
+            //   }
+            // } else {
+            //   console.log("Pehle se hai");
+            //   for (let i = 0; i < currentData.length; i++) {
+            //     if (currentData[i].comId === data.comId) {
+            //       currentData[i] = data;
+            //     }
+            //   }
+            // }
+            // setCommentData(data);
+            // localStorage.setItem(videoId, JSON.stringify(currentData));
           }}
           onReplyAction={(data) => {
-            console.log(JSON.stringify(data, null, 2));
+            let currentData = commentData;
+            console.log("from reply the comment", currentData, data);
+            // for (let i = 0; i < currentData.length; i++) {
+            //   if (data.repliedToCommentId === currentData[i].comId) {
+            //     // console.log(
+            //     //   "hey runnning from the insider function and its function is detecting the comments=============================="
+            //     // );
+            //     currentData[i].replies = [data, ...currentData[i].replies];
+            //     break;
+            //   }
+            // }
+            setCommentData(currentData);
+            localStorage.setItem(videoId, JSON.stringify(currentData));
           }}
           currentData={(commentData) => {
-            console.log("curent commentData", commentData);
+            console.log("curent  commentData", commentData);
           }}
         />
       </div>
